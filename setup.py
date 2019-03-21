@@ -5,7 +5,7 @@ import re
 
 # reading package's version (same way sqlalchemy does)
 with open(
-    os.path.join(os.path.dirname(__file__), 'easymove', '__init__.py')
+    os.path.join(os.path.dirname(__file__), 'grblpy', '__init__.py')
 ) as v_file:
     package_version = \
         re.compile('.*__version__ = \'(.*?)\'', re.S)\
@@ -19,12 +19,12 @@ dependencies = [
 
 
 setup(
-    name='easymove',
+    name='grblpy',
     version=package_version,
     author='Vahid Mardani',
     author_email='vahid.mardani@gmail.com',
-    url='http://github.com/pylover/easymove',
-    description='Genereate GCode using simple API.',
+    url='http://github.com/pylover/grblpy',
+    description='Python interface for grbl.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',  # This is important!
     install_requires=dependencies,
